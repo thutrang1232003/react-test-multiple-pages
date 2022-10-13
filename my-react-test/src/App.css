@@ -1,0 +1,19 @@
+div {
+    line-height: 30px;
+    font-size: 15px;
+}
+
+div > ol {
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+span {
+    display: inline-block;
+    font-style: italic;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
