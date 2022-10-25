@@ -11,37 +11,26 @@ const App = () => {
         useEffect (() => {
             setTimeout(() => {
                 setCurrentColor('blue')
-            }, 2000)
-        }, [])
-
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('yellow')
-            }, 4000)
-        }, [])
-
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('green')
-            }, 6000)
+            }, 1000)
         }, [])
 
         useEffect (() => {
             setTimeout(() => {
                 setCurrentColor('red')
-            }, 8000)
+            }, 2000)
+        }, [])
+
+          
+        useEffect (() => {
+            setTimeout(() => {
+                setCurrentColor('green')
+            }, 3000)
         }, [])
 
         useEffect (() => {
             setTimeout(() => {
-                setCurrentColor('gray')
-            }, 10000)
-        }, [])
-
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('black')
-            }, 12000)
+                setCurrentColor('pink')
+            }, 5000)
         }, [])
 
     return (
