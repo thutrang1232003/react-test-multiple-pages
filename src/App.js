@@ -34,7 +34,7 @@ const App = () => {
         }, [])
 
     return (
-                <Router>
+        <Router>
             <div className="App">
                 <div style={{color: currentColor}}>
                     <h2 >How to play:</h2>
