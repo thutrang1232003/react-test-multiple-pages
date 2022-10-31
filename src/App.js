@@ -1,58 +1,60 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Page1 from "./pages/Page1";
-import Page2 from "./pages/Page2";
-import './App.css';
+import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
+import Card from "./components/Card";
+import './index.css';
 
-const App = () => {
-    const [currentColor, setCurrentColor] = useState('black')
+const App = (props) => {
+    const color = ['purple', 'indigo', 'blue', 'green', 'orange', 'pink'];
+    const [ i, setI ] = useState(0);
 
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('blue')
-            }, 1000)
-        }, [])
-
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('red')
-            }, 2000)
-        }, [])
-
-          
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('green')
-            }, 3000)
-        }, [])
-
-        useEffect (() => {
-            setTimeout(() => {
-                setCurrentColor('pink')
-            }, 5000)
-        }, [])
+    useEffect(() => {
+        setTimeout(() => {
+            setI(i + 1)
+        }, 500)
+    }, [i])
+    
+    if (i + 1 > color.length - 1) {
+        setI(0)
+    }
 
     return (
-        <Router>
-            <div className="App">
-                <div style={{color: currentColor}}>
-                    <h2 >How to play:</h2>
-                    <ol>
-                        <li>First guest what the word of action verb in finnish is.</li>
-                        <li>Then click on each card to check and see the right answer.</li>
-                    </ol>
-                </div>
-                
-                <Routes>
-                    <Route path="/" element={<Page1 />} />
-                    <Route path="/page2" element={<Page2 />} />
-                </Routes>
-                <span><Link to="/">Page 1</Link></span>
-                <span><Link to="/page2">Page 2</Link></span>
+        <div className="App">
+            <div className="card-guide" style={{ color: color[i] }}>
+                <h1>How to play:</h1>
+                <ol>
+                    <li>First guest what the word of action verb in finnish is.</li>
+                    <li>Then click on each card to check and see the right answer.</li>
+                </ol>
             </div>
-        </Router>
-        
+            <div className="flip-card">
+                <Card className='card' index={0} />
+                <Card className='card' index={1} />
+                <Card className='card' index={2} />
+                <Card className='card' index={3} />
+                <Card className='card' index={4} />
+                <Card className='card' index={5} /> 
+                <Card className='card' index={6} /> 
+                <Card className='card' index={7} /> 
+                <Card className='card' index={8} /> 
+                <Card className='card' index={9} /> 
+                <Card className='card' index={10} /> 
+                <Card className='card' index={11} /> 
+                {/* <Card className='card' index={12} />
+                <Card className='card' index={13} />
+                <Card className='card' index={14} />
+                <Card className='card' index={15} />
+                <Card className='card' index={16} />
+                <Card className='card' index={17} /> 
+                <Card className='card' index={18} /> 
+                <Card className='card' index={19} /> 
+                <Card className='card' index={20} /> 
+                <Card className='card' index={21} /> 
+                <Card className='card' index={22} /> 
+                <Card className='card' index={23} />  */}
+            </div>
+            {/* <button>MORE</button> */}
+        </div>
     )
 }
 
