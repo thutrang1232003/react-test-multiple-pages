@@ -7,8 +7,8 @@ function Menu (props){
     return (
         <ul className="Menu">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/lesson">Lesson</Link></li>
-            <li><Link to="/game">Game</Link></li>
+            <li><Link to="/lesson">Lessons</Link></li>
+            <li><Link to="/game">Games</Link></li>
             <li><Link to="/account">Account</Link></li>
         </ul>
             
