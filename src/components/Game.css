@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS FOR GAME*/
+.Game .card-guide {
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 20px;
+    margin: 0 20px;
+    padding: 20px 0;
+    /* letter-spacing: 3px; */
+}
+
+.Game div > ol {
+    margin-left: 30px;
+}
+
+.Game .flip-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Game .flip-card .card {
+    margin-bottom: 40px;
+}

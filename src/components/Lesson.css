@@ -1,0 +1,14 @@
+.Lesson {
+    text-align: center;
+    background-color:purple;
+    padding: 0 30px;
+}
+
+.Lesson .right-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import cardsDetails from '../cardsDetails';
+import './Card.css';
 
 const Card = (props) => {
     const [showFront, setShowFront] = useState(true);
